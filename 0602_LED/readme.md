@@ -12,14 +12,19 @@ void setup()
  
 }
 
-void loop()
-  
+void loop(){
+ if(Serial.available() > 0)
+{
+  char sData = Serial.read();
+  if(sData =='a')
 {
     digitalWrite(9,HIGH);
-     delay(1000);
-    digitalWrite(9,LOW);
- delay(1000);
-
+}
+  else if(sData == 'b')
+{
+ digitalWrite(9,LOW);
+  }
+ }
 }
 
  ```
