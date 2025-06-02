@@ -100,7 +100,7 @@ void setup()
 void loop()
   
 {
-  int buttonValue=digitalRead(BUTTON);
+  int buttonValue=!digitalRead(BUTTON);
   if(buttonValue ==1){
     state =! state;
  	delay(500);
